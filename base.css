@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --dominant-colour: #f7f3ee;
+    --surface-colour: #fdf3cf;
+    --text-colour: #2f2a28;
+    --text-muted-colour: #6b6b6b;
+    --secondary-colour: #4c2d0c;
+    --accent-color: #f78e69;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+    --heading-font-family: "Playfair Display";
+    --other-font-family: "Source Sans 3"; 
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+html {
+    font-size: 16px; 
+}
+
+body {
+    font-size: 1rem;
+    background-color: var(--dominant-colour); 
+}
+
+#website-header {
+    display: flex;
+
+    /* Removed - uncomment if decision to use image in hero for desktop 
+    
+    @media (min-width: 600px) {
+        justify-content: flex-start; 
+    } */ 
+}
+
+@media (min-width: 240px) {
+    #website-header {
+        justify-content: center; 
+    }
+        
+}
+
+#header-logo {
+    height: auto;
+    width: 30vw;
+    max-width: 180px;
+    margin: 0 0 3rem 0;
+
+}
+
+#hero {
+    text-align: center;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;   
+
+}
+
+#hero > div {
+    font-size: 1.5rem;
+
+}
+
+#hero-heading {
+    font-size: 3rem;
+    font-family: var(--heading-font-family), serif;
+    color: var(--secondary-colour);
+    font-weight: var(--font-bold);
+
+}
+
+@media (min-width: 900px) {
+    #hero-heading {
+        font-size: 5rem; 
+    }
+        
+}
+
+.cta-button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--text-colour);
+    font-family: var(--heading-font-family);
+    font-weight: var(--font-medium);  
+    border: none;             /* Remove default border */
+    border-radius: 12px;      /* Adjust for desired roundness */
+    cursor: pointer;          /* Indicate it's clickable */
+}
+
+.highlight {
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+    width: 0;
+    height: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' stroke='%23f78e69' stroke-width='8' fill='none'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 40px 0.5rem;
+    transition: width 0.8s ease;
+}
+
+.highlight.animate::after {
+    width: 100%;
+}
+
+.heading {
+    font-size: 3rem;
+    font-family: var(--heading-font-family), serif;
+    color: var(--secondary-colour);
+    font-weight: var(--font-bold);
+    text-align: center;
+}
+
+.sub-heading {
+    font-family: var(--heading-font-family, sans-serif);
+    color: var(--secondary-colour); 
+    font-size: 1.5rem;
+    text-align: center; 
+    font-weight: var(--font-medium);
+    margin: 1rem auto 1rem auto; 
+}
+
+p {
+    font-family: var(--other-font-family);
+    color: var(--text-colour);
+    text-align: left;
+    font-size: 1rem;  
+}
+
+.work-text {
+    margin: 1rem auto;
+}
+
+.landing-section {
+    margin: 4rem auto 0 auto;
+    text-align: center;
+    width: 100%;
+
+}
+
+.alternate-section {
+    background-color: var(--surface-colour); 
+}
+
+.column-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+/* CSS for Responsive Logo Strip */
+/* --------------------------------------- */
+
+.logo-strip {
+    padding: 1.25rem 0; 
+}
+
+.marquee {
+    --gap: 1rem;
+    --speed: 18s; /* smaller = faster */
+    overflow: hidden; 
+    position: relative; 
+    width: 100%;
+    padding: 0.25rem 0;
+    margin: 1rem auto 0 auto; 
+}
+
+/* Fade edges */
+.marquee::before, .marquee::after {
+    content: "";
+    position: absolute; 
+    top: 0;
+    width: 1rem;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; 
+
+}
+
+.marquee::before {
+    left: 0; 
+    background: linear-gradient(to_right, var(--dominant-colour, transparent));
+}
+
+.marquee::after {
+    right: 0; 
+    background: linear-gradient(to_left, var(--dominant-colour, transparent));
+}
+
+/* Moving track */
+.marquee-track {
+    list-style: none; 
+    display: flex;
+    gap: var(--gap);
+    align-items: center; 
+    width: max-content;
+    margin: 0;
+    padding: 0; 
+    min-height: 64px; 
+    animation: scroll var(--speed) linear infinite; 
+}
+
+.marquee-item {
+    flex: 0 0 auto;
+    display: grid; 
+    place-items: center;
+    width: clamp(120px, 35vw, 180px);
+    height: 64px; 
+    padding: 0.5rem; 
+    border-radius: 0.75rem; 
+    margin-right: 1rem; 
+}
+
+.marquee-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; 
+    height: auto;  
+    object-fit: contain;
+    display: block; 
+    transition: filter .2s ease, opacity .2s ease, transform .2s ease;
+}
+
+@media (min-width: 600px) {
+    .marquee {
+        --gap: 1.25rem;
+        --speed: 20s;
+        width: 90%;
+    }
+    .marquee-item img {
+        height: 34px;
+        max-width: 170px;
+    }
+}
+
+@media (min-width: 900px) {
+    .marquee {
+        --gap: 1.5rem;
+        --speed: 22s;
+        width: 80%; 
+    }
+    .marquee-item img {
+        height: 40px;
+        max-width: 200px;
+    }
+}
+
+/* Animation of logo strip */
+@keyframes scroll {
+    from { transform: translate(0); }
+    to { transform: translate(calc(-50% - (var(--gap) / 2))); }
+}
+
+
+/* Portfolio CSS */
+
+.column-section {
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#work-description {
+    padding: 3rem 3rem 1rem 3rem;
+    margin: 0 auto; 
+}
+
+@media (min-width: 240px) {
+    #work-description {
+        width: 100%; 
+        }
+}
+
+@media (min-width: 600px) {
+    #work-description {
+        width: 50%; 
+    }
+}
+
+
+.left-aligned-title {
+    text-align: left; 
+}
+
+
+.wrapper {
+    display: flex;
+    margin: 3rem 0 3rem 0;
+    
+}
+
+@media (min-width: 240px) {
+    .wrapper {
+        height: 60vh;
+        width: 90%;
+        border-radius: 20px; 
+    }
+}
+
+@media (min-width: 600px) {
+    .wrapper {
+        height:60vh; 
+        width: 30%;
+        border-radius: 20px; 
+    }
+}
+
+.wrapper-inner {
+    width: 100%;
+    height: 100%; 
+}
+
+.slide {
+    width: 100%;
+    height: auto; 
+    border-radius: 20px;
+}
+
+.slider-image{
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;
+} 
+
+.wrapper .swiper-pagination-bullet {
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--dominant-colour);
+    opacity: 0.5s;
+    transition: 0.3s;  
+}
+
+/* Swiper navigation buttons - more specific selector */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    color: var(--dominant-colour) !important;
+    opacity: 0.8; 
+}
+
+/* Optional: Change color on hover */
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover {
+    color: var(--secondary-colour) !important;
+}
+
+.wrapper .swiper-pagination-bullet-active {
+    width: 1.5rem;
+    opacity: 1;
+    border-radius: 0.5rem; 
+}
+
+/* 'What We Do' section */
+
+.services {
+    width: 90%; 
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+@media (min-width: 900px) {
+    .services {
+        flex-direction: row;
+        gap: 2rem;
+        width: 80%;   
+    }
+}
+
+.service-category {
+    width: 100%; 
+    background: var(--surface-colour);
+    padding: 3rem; 
+    margin: 1rem auto;
+    border-radius: 20px; 
+}
+
+.service-intro {
+    margin: 0 0 1rem 0; 
+    text-align: left;
+    font-weight: var(--font-medium); 
+}
+
+.service-category ul li {
+    list-style-type: circle; 
+}
+
+.service-description {
+    font-style: italic;
+    color: var(--text-muted-colour);
+    text-align: left;  
+}
+
+.hidden {
+    display:none; 
+}
+
+
+/* Services 'accordion' style */
+
+.accordion {
+    width: 80%;
+    max-width: 800px;
+    margin: 3rem auto 0 auto; 
+
+}
+
+.accordion-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease; 
+
+}
+
+.accordion-header {
+    background-color: var(--secondary-colour);
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    color: var(--dominant-colour);
+    transition: background-color 0.3s ease;
+    position: relative;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    
+    font-family: var(--heading-font-family, sans-serif);
+    font-size: 1.5rem;
+    font-weight: var(--font-medium);
+}
+
+.accordion-header::after {
+  content: '+';
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.accordion-content {
+    display: none;
+    max-height: 0px;
+    transition: max-height 0.4s ease;
+    padding: 2rem;
+    overflow: hidden;
+    border: 5px solid var(--secondary-colour);
+    border: 0px 5px 5px 0px; 
+
+}
+
+.accordion-content.active {
+    display: block;
+    max-height: 1000px;
+}
+
+
+/* Why Choose Us */
+
+#why-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start; 
+    justify-content: center; 
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.why-us-item {
+    width: 30vw;
+    max-width: 100px; 
+    height: auto; 
+    margin: 1rem auto;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-us-indicator {
+    display: flex; 
+    justify-content: center;
+    padding: 0.5rem; 
+    width: 25vw;
+    max-width: 100px;  
+    height: 25vw;
+    max-height: 100px; 
+    border: 0.5rem solid var(--secondary-colour);
+    border-radius: 50%;
+    
+}
+
+
+.why-us-item img {
+    align-content: center;
+    margin: 0 auto;
+}
+
+.why-us-description {
+    color: var(--text-colour);
+    font-family: var(--other-font-family); 
+    text-align: center;
+    margin: 1rem auto;
+    height: auto;
+    font-weight: var(--font-medium); 
+}
+
+
+
+/* How We Work */ 
+
+.process-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    width: 100%;
+    justify-content: center;
+    height: auto;
+}
+
+.process-item {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    margin: 0.5rem auto; 
+}
+
+.process-item:first-of-type {
+    margin-top: 1.5rem; 
+}
+
+.process-number {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center; 
+}
+
+.process-number img {
+    height: 60%; 
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.process-step {
+    display: flex; 
+    flex-direction: column; 
+    width: 70%;
+    margin: 0 auto;
+}
+
+.process-title {
+    font-family: var(--heading-font-family, sans-serif);
+    color: var(--secondary-colour); 
+    font-size: 1.5rem;
+    text-align: left; 
+    font-weight: var(--font-medium);
+    margin: 0 auto 0.5rem auto; 
+
+}
+
+/* Final CTA */
+#cta-container {
+    background-color: var(--surface-colour);
+    border-radius: 20px;
+    padding: 1rem;
+    height: auto;
+    width: 100%;
+    margin: 2.5rem auto;
+    justify-content: center; 
+}
+
+.cta-heading {
+    font-family: var(--heading-font-family, sans-serif);
+    font-weight: var(--font-bold);
+    color: var(--secondary-colour); 
+    font-size: 1.5rem;
+    text-align: left; 
+    margin: 0 auto 1rem auto; 
+}
+
+.cta-tagline {
+    font-family: var(--other-font-family, sans-serif);
+    font-weight: var(--font-medium);
+    color: var(--text-colour); 
+    font-size: 1rem;
+    text-align: left; 
+    margin: 0 auto 1rem auto; 
+}
+
+
+/* Footer */ 
+
+footer {
+    width: 100%;
+    height: 20vh; 
+    border-top: 4px solid var(--secondary-colour);
+    display: flex; 
+    padding: 2rem; 
+    justify-content: space-between;
+    background-color: var(--secondary-colour);
+}
+
+#footer-icon-container {
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem; 
+}
+
+footer img {
+    width: 1.5rem; 
+    height: auto;
+}
+
