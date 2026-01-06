@@ -628,6 +628,7 @@ p {
     padding: 1rem;
     height: auto;
     width: 100%;
+    max-width: 600px; 
     margin: 2.5rem auto;
     justify-content: center; 
 }
