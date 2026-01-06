@@ -481,7 +481,17 @@ p {
 
 /* Why Choose Us */
 
-#why-us-container {
+#why-choose-title {
+    font-size: 4rem; 
+}
+
+@media (min-width: 240px) {
+    .why-us-header-container {
+        width: 100%;
+        padding: 3rem 3rem 1rem 3rem;  
+    }
+
+    #why-us-container {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -489,11 +499,36 @@ p {
     justify-content: center; 
     width: 100%;
     margin: 1rem auto;
+    padding: 3rem 3rem 0 3rem; 
+    }
 }
+
+@media (min-width: 600px) {
+    .why-us-header-container {
+        width: 30%;
+        margin: 0 auto;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    #why-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start; 
+    justify-content: center; 
+    width: 60%;
+    margin: 1rem auto;
+    }
+}
+
 
 .why-us-item {
     width: 30vw;
-    max-width: 100px; 
+    max-width: 200px; 
     height: auto; 
     margin: 1rem auto;
     display: flex; 
@@ -593,6 +628,7 @@ p {
     padding: 1rem;
     height: auto;
     width: 100%;
+    max-width: 600px; 
     margin: 2.5rem auto;
     justify-content: center; 
 }
