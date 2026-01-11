@@ -67,6 +67,10 @@ body {
 
 }
 
+.hero-text {
+    padding: 0 2rem 0 2rem; 
+}
+
 #hero > div {
     font-size: 1.5rem;
 
@@ -172,6 +176,10 @@ p {
 
 .logo-strip {
     padding: 1.25rem 0; 
+}
+
+.logo-strip header {
+    padding: 0 2rem 0 2rem;
 }
 
 .marquee {
