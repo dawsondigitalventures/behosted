@@ -158,7 +158,6 @@ p {
     margin: 4rem auto 0 auto;
     text-align: center;
     width: 100%;
-
 }
 
 .alternate-section {
@@ -243,7 +242,7 @@ p {
     max-height: 100%;
     width: auto; 
     height: auto;  
-    object-fit: contain;
+    object-fit: scale-down;
     display: block; 
     transition: filter .2s ease, opacity .2s ease, transform .2s ease;
 }
