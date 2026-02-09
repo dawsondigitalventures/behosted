@@ -656,14 +656,18 @@ p {
 
 /* Final CTA */
 #cta-container {
+    display: flex;
+    flex-direction: column;  
     background-color: var(--surface-colour);
     border-radius: 20px;
     padding: 1rem;
+    gap: 0.5rem; 
     height: auto;
     width: 100%;
     max-width: 600px; 
     margin: 2.5rem auto;
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;  
 }
 
 .cta-heading {
