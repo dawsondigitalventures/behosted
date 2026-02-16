@@ -150,6 +150,11 @@ p {
     font-size: 1rem;  
 }
 
+.link {
+    font-family: var(--other-font-family);
+    font-size: 1rem; 
+}
+
 .work-text {
     margin: 1rem auto;
 }
