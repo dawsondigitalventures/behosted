@@ -12,7 +12,9 @@
     --font-medium: 500;
     --font-bold: 700;
     --heading-font-family: "Playfair Display";
-    --other-font-family: "Source Sans 3"; 
+    --other-font-family: "Source Sans 3";
+
+    --fade: 3rem;                 /* width of fade */
 }
 
 *, *::before, *::after {
@@ -186,6 +188,8 @@ p {
     padding: 0 2rem 0 2rem;
 }
 
+              /* MUST match the background behind the logos */
+
 .marquee {
     --gap: 1rem;
     --speed: 18s; /* smaller = faster */
@@ -193,7 +197,8 @@ p {
     position: relative; 
     width: 100%;
     padding: 0.25rem 0;
-    margin: 1rem auto 0 auto; 
+    margin: 1rem auto 0 auto;
+    
 }
 
 /* Fade edges */
@@ -201,21 +206,29 @@ p {
     content: "";
     position: absolute; 
     top: 0;
-    width: 1rem;
+    width: var(--fade);
     height: 100%;
-    z-index: 1;
+    z-index: 10;
     pointer-events: none; 
 
 }
 
 .marquee::before {
-    left: 0; 
-    background: linear-gradient(to_right, var(--dominant-colour, transparent));
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--dominant-colour) 0%,
+    transparent 100%
+  );
 }
 
 .marquee::after {
-    right: 0; 
-    background: linear-gradient(to_left, var(--dominant-colour, transparent));
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--dominant-colour) 0%,
+    transparent 100%
+  );
 }
 
 /* Moving track */
@@ -228,7 +241,9 @@ p {
     margin: 0;
     padding: 0; 
     min-height: 64px; 
-    animation: scroll var(--speed) linear infinite; 
+    animation: scroll var(--speed) linear infinite;
+    position: relative; 
+    z-index: 1;
 }
 
 .marquee-item {
@@ -239,7 +254,8 @@ p {
     height: 64px; 
     padding: 0.5rem; 
     border-radius: 0.75rem; 
-    margin-right: 1rem; 
+    margin-right: 1rem;
+    width: auto;  
 }
 
 .marquee-item img {
