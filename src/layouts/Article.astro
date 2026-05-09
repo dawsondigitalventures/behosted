@@ -1,0 +1,64 @@
+---
+import "../styles/base.css";
+import "../styles/article.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+const {
+  title = "Be Hosted",
+  description = "Tablescaping & Social Content Creation",
+  frontmatter = {}
+} = Astro.props;
+
+const siteUrl = "https://wearebehosted.co.uk";
+
+let path = Astro.url.pathname;
+
+// ensure trailing slash consistency
+if (!path.endsWith("/")) {
+  path += "/";
+}
+
+const canonicalUrl =
+  frontmatter.canonical ??
+  new URL(path, siteUrl).toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content={description} />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HX0PB4WL48"></script>
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HX0PB4WL48');
+    </script>
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+
+    <script is:inline src="/js/core.js"></script>
+  </body>
+</html>
