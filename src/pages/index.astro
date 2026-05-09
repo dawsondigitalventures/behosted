@@ -1,5 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const featured = (await getCollection("case-studies", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+  .slice(0, 3);
 ---
 
 <Layout
@@ -147,42 +152,38 @@ import Layout from "../layouts/Layout.astro";
 		<section class="landing-section">
 			<h2 class="heading case-study__section-header">Featured Case Studies</h2>
 			<div class="case-study__container">
-				<div class="case-study__card case-study__card--main">
-					<div class="case-study__image-container">
-						<img class="case-study__image" src="/images/case-studies/Popoli/Popoli-table-design.jpg" alt="Dinner table laid with popoli olive oil " loading="lazy" fetchpriority="low">
-					</div>
-					<div class="case-study__card-content">
-						<h2 class="case-study__title">
-							Popoli
-						</h2>
-						<p class="case-study__subtitle">
-							Sponteneous Dinner at Home
-						</p>
-						<p class="case-study__description">
-
-						</p>
-						<a class="link" href="/case-studies/popoli-spontaneous-dinner-at-home/">Read the case study &#x2192;</a>
-					</div>
-				</div>
-				<div class="case-study__right-section">
-					<div class="case-study__card case_study__card--sub">
-						<div class="case-study__image-container">
-							<img class="case-study__image" src="/images/case-studies/Cerani-Studio/Cerani_Studio_bedside_shot.jpg" alt="Fresh vegetable soup and focaccia lunch" loading="lazy" fetchpriority="low">
-						</div>
+				{featured[0] && (
+					<div class="case-study__card case-study__card--main">
+						{featured[0].data.heroImage && (
+							<div class="case-study__image-container">
+								<img class="case-study__image" src={featured[0].data.heroImage} alt={featured[0].data.brandName ?? featured[0].data.title} loading="lazy" fetchpriority="low">
+							</div>
+						)}
 						<div class="case-study__card-content">
-							<h2 class="case-study__title">
-								Cerani Studio
-							</h2>
-							<p class="case-study__subtitle">
-								The Everyday Ritual
-							</p>
-							<p class="case-study__description">
-
-							</p>
-							<a class="link" href="/case-studies/cerani-studio-everyday-ritual/">Read the case study &#x2192;</a>
+							<h2 class="case-study__title">{featured[0].data.brandName ?? featured[0].data.title}</h2>
+							<p class="case-study__subtitle">{featured[0].data.subtitle}</p>
+							<a class="link" href={`/case-studies/${featured[0].id}/`}>Read the case study &#x2192;</a>
 						</div>
 					</div>
-				</div>
+				)}
+				{featured.length > 1 && (
+					<div class="case-study__right-section">
+						{featured.slice(1).map((study) => (
+							<div class="case-study__card case_study__card--sub">
+								{study.data.heroImage && (
+									<div class="case-study__image-container">
+										<img class="case-study__image" src={study.data.heroImage} alt={study.data.brandName ?? study.data.title} loading="lazy" fetchpriority="low">
+									</div>
+								)}
+								<div class="case-study__card-content">
+									<h2 class="case-study__title">{study.data.brandName ?? study.data.title}</h2>
+									<p class="case-study__subtitle">{study.data.subtitle}</p>
+									<a class="link" href={`/case-studies/${study.id}/`}>Read the case study &#x2192;</a>
+								</div>
+							</div>
+						))}
+					</div>
+				)}
 			</div>
 		</section>      
 		<section class="landing-section">
