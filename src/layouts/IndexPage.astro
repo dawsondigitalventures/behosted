@@ -1,0 +1,17 @@
+---
+import Layout from "./Article.astro";
+import "../styles/index-page.css";
+
+const { title, description, heading } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <main class="page__wrapper">
+    <article class="post">
+      <header class="post__header">
+        <h1 class="heading">{heading}</h1>
+      </header>
+      <slot />
+    </article>
+  </main>
+</Layout>
