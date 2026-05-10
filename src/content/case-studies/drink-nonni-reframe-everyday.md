@@ -8,7 +8,6 @@ brandName: "Drink Nonni"
 subtitle: "Reframing the Everyday"
 featured: true
 draft: false
-canonical: "https://behosted.co.uk/case-studies/drink-nonni/"
 ---
 
 Some drinks are built for function. Nonni had the opportunity to become something more.
