@@ -7,7 +7,7 @@ showHeroOnPage: false
 brandName: "Drink Nonni"
 subtitle: "Reframing the Everyday"
 featured: true
-draft: false
+draft: true
 ---
 
 Some drinks are built for function. Nonni had the opportunity to become something more.
