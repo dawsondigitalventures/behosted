@@ -1,6 +1,6 @@
 # Be Hosted — Content Editor Guide
 
-This guide is for the Be Hosted team adding new case studies to the website. Everything is done through GitHub — no coding knowledge or local setup needed.
+This guide covers adding two types of content to the website: **case studies** and **blog posts**. Everything is done through GitHub.
 
 ---
 
@@ -85,7 +85,7 @@ The file is now saved. Because `draft: true` is set, nothing will appear on the 
 To upload images for the case study:
 
 1. In the repository, navigate to `public/images/`
-2. If a folder for the brand doesn't exist yet, you can create one — click **Add file → Create new file**, type `brand-name/placeholder.txt` as the filename (GitHub requires a file to create a folder), then delete the placeholder later
+2. If a folder for the brand doesn't exist yet, you can create one — click **Add file → Create new file**, type `brand-name/placeholder.txt` as the filename (GitHub requires a file to create a folder)
 3. To upload images, navigate into the brand folder and click **Add file → Upload files**
 4. Drag in your images and commit
 
@@ -104,6 +104,14 @@ Then reference them in your frontmatter:
 ```yaml
 heroImage: "/images/brand-name/hero-image.jpg"
 ```
+
+To embed an image within the body of your case study, use this markdown syntax anywhere in the text:
+
+```markdown
+![A short description of the image](/images/brand-name/your-image.jpg)
+```
+
+The text inside `[...]` is the alt text — a brief description used by screen readers and search engines. Keep it short and descriptive, e.g. `![Styled event table with candles and florals]`.
 
 Images should be JPG or WebP, compressed for web (aim for under 300kb per image).
 
@@ -181,3 +189,84 @@ When Ella first designed the Mama Vino logo, it was sketched by hand, slightly m
 - Make sure the image file is uploaded to the `public/images/` folder
 - The path in `heroImage` must start with `/` (e.g. `/images/brand/image.jpg`)
 - Set `showHeroOnPage: true` if you want it displayed on the case study page itself
+
+---
+
+## Adding a Blog Post
+
+Blog posts live at `wearebehosted.co.uk/blog/your-post-name/` and are listed on the blog index page at `/blog/`. The process is nearly identical to case studies, with a simpler set of frontmatter fields.
+
+### Step 1 — Create the file in GitHub
+
+1. Go to the repository on GitHub
+2. Navigate to `src/content/blog/`
+3. Click **Add file → Create new file**
+4. Type your filename — same kebab-case rules as case studies, ending in `.md`
+
+| Filename | Live URL |
+|---|---|
+| `why-tablescaping-matters.md` | `wearebehosted.co.uk/blog/why-tablescaping-matters/` |
+| `spring-hosting-guide-2026.md` | `wearebehosted.co.uk/blog/spring-hosting-guide-2026/` |
+
+---
+
+### Step 2 — Add the frontmatter
+
+```yaml
+---
+title: "Your Post Title"
+description: "One or two sentences summarising the post for search engines."
+publishDate: 2026-05-10
+heroImage: "/images/blog/your-image.jpg"
+author: "Your Name"
+draft: true
+---
+```
+
+> Start with `draft: true`. The post won't appear on the site until you change it to `false`.
+
+---
+
+### Step 3 — Write the body
+
+Same as case studies — write your content below the closing `---`. Use `##` for section headings and leave a blank line between paragraphs.
+
+---
+
+### Step 4 — Save the file (commit)
+
+Scroll to the bottom of the GitHub page, optionally add a short commit message, select **Commit directly to the main branch**, and click **Commit changes**.
+
+---
+
+### Step 5 — Add images (if needed)
+
+Upload images to `public/images/blog/` (or a brand-specific subfolder) following the same process as case studies. Reference them in the frontmatter or inline in the body:
+
+```yaml
+heroImage: "/images/blog/your-image.jpg"
+```
+
+```markdown
+![Description of the image](/images/blog/your-image.jpg)
+```
+
+---
+
+### Step 6 — Publish
+
+Open the file in GitHub, click the pencil icon to edit, change `draft: true` to `draft: false`, and commit. The post will appear on the live blog listing within a minute or two.
+
+---
+
+## Blog Frontmatter Field Reference
+
+| Field | Required | Type | Purpose |
+|---|---|---|---|
+| `title` | Yes | text | Page title and main heading |
+| `description` | Yes | text | Meta description for search engines (1–2 sentences) |
+| `publishDate` | Yes | date (YYYY-MM-DD) | Controls sort order on the blog listing — newest first |
+| `heroImage` | No | file path | Path to a hero image, e.g. `/images/blog/image.jpg` |
+| `author` | No | text | Author name displayed on the post |
+| `draft` | No | true/false | `true` hides the post from the live site |
+| `canonical` | No | URL | Custom canonical URL if the content exists elsewhere |
