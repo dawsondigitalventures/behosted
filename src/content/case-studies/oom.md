@@ -1,13 +1,13 @@
 ---
 title: "OOM: Designing moments of pause"
 description: "With OOM, that meant creating space for people to slow down, connect and engage in a way that reflected calm, focus and balance, without needing to say it out loud."
-publishDate: 2026-01-15
+publishDate: 2026-05-12
 brandName: "OOM"
 subtitle: "Designing moments of pause"
-heroImage: "/images/brand-name/hero-image.jpg"
+heroImage: "/images/case-studies/oom/oom-2.jpg"
 showHeroOnPage: false
 featured: true
-draft: true
+draft: false
 ---
 
 Some events are built around energy. This one was built around intention.
@@ -26,6 +26,8 @@ We proposed a clean tablescape anchored by candlelight, allowing the space to tr
 
 Alongside this, we introduced a key interactive element. The mindful cards.
 
+![supper club guest at dinner toasting wine glasses](/images/case-studies/oom/oom-1.jpg)
+
 ## The outcome
  
 The concept centred around gentle interaction.
@@ -35,6 +37,8 @@ Each guest received a small, colour-coordinated card tied to one of OOM’s core
 The prompts on each card were intentionally light. Short, optional reflections that invited guests to pause and engage, without placing pressure on participation. Some used them as conversation starters. Others kept the moment to themselves.
 
 This layer added depth without overwhelming the setting. The table remained clean and uncluttered, while still offering something personal and memorable.
+
+![oom cans on table in ice buckets at brand event](/images/case-studies/oom/oom-3.jpg)
 
 ## The end result
  
@@ -46,3 +50,4 @@ OOM’s presence was felt rather than imposed.
 
 At Behosted, we focus on translating brand values into lived experiences that feel natural and cohesive. With OOM, that meant creating space for people to slow down, connect and engage in a way that reflected calm, focus and balance, without needing to say it out loud.
 
+![guest at table enjoying food together and talking](/images/case-studies/oom/oom-4.jpg)
