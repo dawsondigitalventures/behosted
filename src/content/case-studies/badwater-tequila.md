@@ -4,7 +4,7 @@ description: "Discover how Behosted reimagined Badwater Tequila through an immer
 publishDate: 2026-02-10
 heroImage: ""
 showHeroOnPage: false
-brandName: "Mama Vino"
+brandName: "Badwater Tequila"
 subtitle: "Tequila After Dark"
 featured: true
 draft: false
