@@ -4,7 +4,7 @@ description: "Discover how social-first marketing is transforming consumer brand
 publishDate: 2026-05-15
 heroImage: ""
 author: "Ellie"
-draft: true
+draft: false
 ---
 
 The way consumers discover brands has fundamentally changed. For decades, traditional advertising relied heavily on controlled messaging delivered through television, print, outdoor advertising, and polished campaigns.
