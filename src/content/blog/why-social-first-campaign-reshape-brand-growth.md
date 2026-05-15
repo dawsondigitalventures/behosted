@@ -20,24 +20,24 @@ They are where brand discovery, audience engagement, and purchasing behaviour in
 Modern audiences spend significant amounts of time consuming content across TikTok, Instagram, YouTube, and emerging social platforms.This has changed how attention works.
 
 Consumers now engage with content that feels:
-•	Fast
-•	Authentic
-•	Entertaining
-•	Informative
-•	Visually engaging
-•	Emotionally relatable
+- Fast
+- Authentic
+- Entertaining
+- Informative
+- Visually engaging
+- Emotionally relatable
 
 Traditional advertising often struggles in these environments because audiences can immediately scroll away.
 
 Social-first campaigns are designed specifically around how people behave on these platforms.
 
 This includes understanding:
-•	Viewing habits
-•	Attention spans
-•	Platform culture
-•	Creator influence
-•	Community interaction
-•	Visual storytelling
+- Viewing habits
+- Attention spans
+- Platform culture
+- Creator influence
+- Community interaction
+- Visual storytelling
 
 The strongest campaigns are not simply adapted for social media after launch. They are built for social behaviour from the very beginning.
 
@@ -46,12 +46,12 @@ The strongest campaigns are not simply adapted for social media after launch. Th
 Increasingly, consumers are using TikTok and Instagram as discovery engines.
 
 People search social platforms for:
-•	Product recommendations
-•	Restaurant reviews
-•	Fashion inspiration
-•	Wellness advice
-•	Travel ideas
-•	Brand opinions
+- Product recommendations
+- Restaurant reviews
+- Fashion inspiration
+- Wellness advice
+- Travel ideas
+- Brand opinions
 
 This shift is changing how brands approach marketing strategy. Visibility today depends not only on advertising budgets, but also on relevance within social conversation.
 
@@ -64,11 +64,11 @@ This is one of the reasons creator partnerships and community-led campaigns have
 One of the defining characteristics of modern social marketing is the growing importance of creators, community voices, and real customer experience.
 
 Consumers increasingly trust:
-•	Creator recommendations
-•	Behind-the-scenes content
-•	Honest reviews
-•	User-generated content
-•	Founder storytelling
+- Creator recommendations
+- Behind-the-scenes content
+- Honest reviews
+- User-generated content
+- Founder storytelling
 more than highly polished advertising.
 
 This does not mean production quality no longer matters.
@@ -80,14 +80,14 @@ It means audiences respond best when content feels human and platform-native. Th
 Traditional marketing campaigns were often built around one hero advertisement. Modern campaigns function differently.
 
 Today, campaigns often include:
-•	Short-form video
-•	Creator collaborations
-•	Event content
-•	Social storytelling
-•	Behind-the-scenes footage
-•	Community interaction
-•	Founder content
-•	User-generated content
+- Short-form video
+- Creator collaborations
+- Event content
+- Social storytelling
+- Behind-the-scenes footage
+- Community interaction
+- Founder content
+- User-generated content
 
 This creates a content ecosystem rather than a single campaign asset.
 
@@ -100,12 +100,12 @@ At Behosted, campaigns are approached through this integrated lens, combining ex
 Modern audiences engage most strongly with brands that feel culturally aware. This does not mean constantly chasing trends.
 
 It means understanding:
-•	Audience behaviour
-•	Online conversation
-•	Platform culture
-•	Visual trends
-•	Consumer values
-•	Community dynamics
+- Audience behaviour
+- Online conversation
+- Platform culture
+- Visual trends
+- Consumer values
+- Community dynamics
 
 The strongest brands contribute meaningfully to culture rather than simply advertising at people.
 

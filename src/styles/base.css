@@ -110,10 +110,18 @@ body {
     background-color: var(--accent-color);
     color: var(--text-colour);
     font-family: var(--heading-font-family);
-    font-weight: var(--font-medium);  
-    border: none;             /* Remove default border */
-    border-radius: 12px;      /* Adjust for desired roundness */
-    cursor: pointer;          /* Indicate it's clickable */
+    font-weight: var(--font-medium);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f9a080;
 }
 
 .highlight {
