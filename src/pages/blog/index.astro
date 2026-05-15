@@ -7,9 +7,9 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft))
 ---
 
 <IndexPage
-  title="Blog | Be Hosted"
-  description="Insights, ideas and inspiration from the Be Hosted team."
-  heading="Blog"
+  title="Journal | Be Hosted"
+  description="Insights, ideas and inspiration from the Behosted team."
+  heading="Journal"
 >
   {posts.length === 0 && <p>No posts yet — check back soon.</p>}
   <ul class="index-list">
