@@ -67,12 +67,13 @@ body {
 
 #hero {
     text-align: center;
-    height: 55vh;
+    min-height: 55vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;   
-
+    gap: 1rem;
+    padding: 2rem 2rem 3rem;
 }
 
 .hero-text {
@@ -1247,6 +1248,15 @@ footer {
     .cta-section {
         padding-top: 4rem;
         padding-bottom: 4rem;
+    }
+
+    .cta-button {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 0.875rem 2rem;
+        border-radius: 0;
+        color: white;
     }
 }
  
