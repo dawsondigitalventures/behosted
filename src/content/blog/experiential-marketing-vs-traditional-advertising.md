@@ -2,7 +2,7 @@
 title: "Why Experiential Marketing Connects Better Than Traditional Advertising"
 description: "Discover why modern consumers connect more deeply with experiences than traditional advertising, and how experiential marketing builds stronger brand loyalty, engagement, and community."
 publishDate: 2026-05-10
-heroImage: "/images/blog/oom-4.jpg"
+heroImage: ""
 author: "Ellie"
 draft: false
 ---
