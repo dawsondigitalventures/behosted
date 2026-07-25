@@ -2,7 +2,7 @@
 title: "Badwater Tequila, Tequila After Dark"
 description: "Discover how Behosted reimagined Badwater Tequila through an immersive, candlelit brand experience blending premium hosting, editorial content, and social-first storytelling."
 publishDate: 2026-02-10
-heroImage: ""
+heroImage: "/images/case-studies/badwater-tequila/badwater-cans-in-curtain.jpeg"
 showHeroOnPage: false
 brandName: "Badwater Tequila"
 subtitle: "Tequila After Dark"
