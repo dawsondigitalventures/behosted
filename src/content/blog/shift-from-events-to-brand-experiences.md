@@ -3,7 +3,7 @@ title: "The shift from big events to intentional brand experiences"
 description: "Discover why consumer brands are shifting from large-scale events to intentional brand experiences and how curated experiential marketing builds stronger engagement, content and community.
 "
 publishDate: 2026-07-30
-heroImage: "/images/blog/your-image.jpg"
+heroImage: ""
 author: "Ellie Dawson"
 draft: false
 ---
