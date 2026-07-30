@@ -4,7 +4,7 @@ description: "One or two sentences summarising the post for search engines."
 publishDate: 2026-05-10
 heroImage: "/images/blog/your-image.jpg"
 author: "Your Name"
-draft: true
+draft: false
 ---
 For many years, large-scale events dominated experiential marketing. Brands often focused on creating high-attendance launches designed to maximise visibility and press coverage.
 
