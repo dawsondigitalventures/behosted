@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+	title="Thank You | We Are Behosted"
+	description="Thanks for your enquiry — we'll be in touch soon."
+>
+	<main class="thank-you">
+		<section class="thank-you__inner">
+			<p class="eyebrow">Enquiry received</p>
+			<h1 class="heading thank-you__title">Thank you — we'll be in touch</h1>
+			<p class="thank-you__text">
+				We've received your details and will get back to you shortly. In the
+				meantime, take a look at some of the brand experiences we've created.
+			</p>
+			<div class="thank-you__actions">
+				<a href="/" class="cta-button">Back to home</a>
+				<a href="/case-studies/" class="section-link">View our work →</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.thank-you {
+		min-height: 55vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4rem 1.5rem 6rem;
+	}
+
+	.thank-you__inner {
+		text-align: center;
+		max-width: 640px;
+	}
+
+	.thank-you__title {
+		margin-top: 0.75rem;
+	}
+
+	.thank-you__text {
+		font-family: var(--other-font-family);
+		text-align: center;
+		color: var(--text-muted-colour);
+		font-size: 1.05rem;
+		line-height: 1.7;
+		max-width: 480px;
+		margin: 1.25rem auto 2.5rem;
+	}
+
+	.thank-you__actions {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+</style>

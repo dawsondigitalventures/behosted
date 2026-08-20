@@ -1,0 +1,337 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+	title="Get in Touch | We Are Behosted"
+	description="Tell us about your brand and project. We create social-first events, PR moments and creative content that bring brands into culture."
+>
+	<main class="contact">
+		<section class="contact__intro">
+			<p class="eyebrow">Let's create together</p>
+			<h1 class="heading contact__title">Ready to be hosted?</h1>
+			<p class="sub-heading contact__sub">
+				Fill in the questions below so we can understand how to help you.
+			</p>
+		</section>
+
+		<section class="contact__form-section">
+			<form
+				class="contact-form"
+				action="https://formsubmit.co/contactbehosted@gmail.com"
+				method="POST"
+			>
+				<!-- FormSubmit control fields -->
+				<input type="hidden" name="_subject" value="New enquiry from wearebehosted.co.uk" />
+				<input type="hidden" name="_template" value="table" />
+				<input type="hidden" name="_next" value="https://wearebehosted.co.uk/thank-you/" />
+				<input type="hidden" name="_captcha" value="false" />
+				<!-- Honeypot: hidden from humans, catches bots -->
+				<input type="text" name="_honey" class="contact-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+				<!-- ── About you ─────────────────────────────── -->
+				<fieldset class="contact-form__group">
+					<legend class="contact-form__legend">About you</legend>
+
+					<div class="field">
+						<label class="field__label" for="brand">
+							Company / Brand name <span class="field__req">*</span>
+						</label>
+						<input class="field__input" type="text" id="brand" name="Company / Brand name" required />
+					</div>
+
+					<div class="field">
+						<label class="field__label" for="email">
+							Your email <span class="field__req">*</span>
+						</label>
+						<input class="field__input" type="email" id="email" name="email" required />
+					</div>
+
+					<div class="field">
+						<label class="field__label" for="website">Website &amp; social handles</label>
+						<input class="field__input" type="text" id="website" name="Website & social handles" placeholder="e.g. yourbrand.com · @yourbrand" />
+					</div>
+				</fieldset>
+
+				<!-- ── Your project ──────────────────────────── -->
+				<fieldset class="contact-form__group">
+					<legend class="contact-form__legend">Your project</legend>
+
+					<div class="field">
+						<span class="field__label">
+							Which of the following best describes your project? <span class="field__req">*</span>
+						</span>
+						<div class="field__options">
+							<label class="option"><input type="radio" name="Project type" value="Brand launch campaign content" required /> <span>Brand launch campaign content</span></label>
+							<label class="option"><input type="radio" name="Project type" value="Product spotlight content" /> <span>Product spotlight content</span></label>
+							<label class="option"><input type="radio" name="Project type" value="Seasonal / event content" /> <span>Seasonal / event content</span></label>
+							<label class="option"><input type="radio" name="Project type" value="Influencer + creator content collaboration" /> <span>Influencer + creator content collaboration</span></label>
+							<label class="option"><input type="radio" name="Project type" value="Brand experience content (events, editorial moments)" /> <span>Brand experience content (events, editorial moments)</span></label>
+							<label class="option"><input type="radio" name="Project type" value="Ongoing social content support" /> <span>Ongoing social content support</span></label>
+							<label class="option"><input type="radio" name="Project type" value="Other" /> <span>Other</span></label>
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="field__label" for="description">
+							Please briefly describe your brand and project <span class="field__req">*</span>
+						</label>
+						<textarea class="field__input field__textarea" id="description" name="Brand & project description" rows="4" required></textarea>
+					</div>
+
+					<div class="field">
+						<span class="field__label">What are your key goals for this project?</span>
+						<div class="field__options field__options--grid">
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Increase brand awareness" /> <span>Increase brand awareness</span></label>
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Drive engagement on social platforms" /> <span>Drive engagement on social platforms</span></label>
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Support product launch or promotion" /> <span>Support product launch or promotion</span></label>
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Build premium brand storytelling assets" /> <span>Build premium brand storytelling assets</span></label>
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Create long-form campaign content" /> <span>Create long-form campaign content</span></label>
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Attract new audiences or communities" /> <span>Attract new audiences or communities</span></label>
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Other" /> <span>Other</span></label>
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="field__label" for="audience">Who is your target audience?</label>
+						<textarea class="field__input field__textarea" id="audience" name="Target audience" rows="3"></textarea>
+					</div>
+
+					<div class="field">
+						<label class="field__label" for="message">
+							What is the key message or feeling you want your audience to take away?
+						</label>
+						<textarea class="field__input field__textarea" id="message" name="Key message / feeling" rows="3"></textarea>
+					</div>
+				</fieldset>
+
+				<!-- ── Content ───────────────────────────────── -->
+				<fieldset class="contact-form__group">
+					<legend class="contact-form__legend">Content</legend>
+
+					<div class="field">
+						<span class="field__label">What types of content are you interested in producing?</span>
+						<div class="field__options field__options--grid">
+							<label class="option"><input type="checkbox" name="Content types[]" value="High-res photography" /> <span>High-res photography</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Short-form videos (Reels/TikTok)" /> <span>Short-form videos (Reels/TikTok)</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Long-form video (60–90s)" /> <span>Long-form video (60–90s)</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Lifestyle & editorial imagery" /> <span>Lifestyle &amp; editorial imagery</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Behind-the-scenes" /> <span>Behind-the-scenes</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Event coverage" /> <span>Event coverage</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Influencer / Creator content" /> <span>Influencer / Creator content</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Other" /> <span>Other</span></label>
+						</div>
+					</div>
+
+					<div class="field">
+						<span class="field__label">Where will the content be used?</span>
+						<div class="field__options field__options--grid">
+							<label class="option"><input type="checkbox" name="Content usage[]" value="Instagram feed" /> <span>Instagram feed</span></label>
+							<label class="option"><input type="checkbox" name="Content usage[]" value="Instagram Stories" /> <span>Instagram Stories</span></label>
+							<label class="option"><input type="checkbox" name="Content usage[]" value="TikTok" /> <span>TikTok</span></label>
+							<label class="option"><input type="checkbox" name="Content usage[]" value="Website / eCommerce" /> <span>Website / eCommerce</span></label>
+							<label class="option"><input type="checkbox" name="Content usage[]" value="Email marketing" /> <span>Email marketing</span></label>
+							<label class="option"><input type="checkbox" name="Content usage[]" value="Paid ads" /> <span>Paid ads</span></label>
+							<label class="option"><input type="checkbox" name="Content usage[]" value="Other" /> <span>Other</span></label>
+						</div>
+					</div>
+
+					<div class="field">
+						<span class="field__label">Do you need creative strategy support?</span>
+						<div class="field__options">
+							<label class="option"><input type="radio" name="Creative strategy support" value="Yes, full campaign strategy included" /> <span>Yes, full campaign strategy included</span></label>
+							<label class="option"><input type="radio" name="Creative strategy support" value="Yes, basic content guidance" /> <span>Yes, basic content guidance</span></label>
+							<label class="option"><input type="radio" name="Creative strategy support" value="No, we only need content execution" /> <span>No, we only need content execution</span></label>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- ── Logistics ─────────────────────────────── -->
+				<fieldset class="contact-form__group">
+					<legend class="contact-form__legend">Logistics</legend>
+
+					<div class="field">
+						<label class="field__label" for="timeline">What is your desired timeline?</label>
+						<input class="field__input" type="text" id="timeline" name="Desired timeline" placeholder="e.g. ASAP · September 2026 · Q4" />
+					</div>
+
+					<div class="field">
+						<span class="field__label">Do you have an allocated budget for this project?</span>
+						<div class="field__options">
+							<label class="option"><input type="radio" name="Budget" value="£0–£500" /> <span>£0–£500</span></label>
+							<label class="option"><input type="radio" name="Budget" value="£500–£1,000" /> <span>£500–£1,000</span></label>
+							<label class="option"><input type="radio" name="Budget" value="£1,000–£2,500" /> <span>£1,000–£2,500</span></label>
+							<label class="option"><input type="radio" name="Budget" value="£2,500–£5,000" /> <span>£2,500–£5,000</span></label>
+							<label class="option"><input type="radio" name="Budget" value="£5,000+" /> <span>£5,000+</span></label>
+							<label class="option"><input type="radio" name="Budget" value="Unsure / Needs discussion" /> <span>Unsure / Needs discussion</span></label>
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="field__label" for="anything-else">Is there anything else you'd like us to know?</label>
+						<textarea class="field__input field__textarea" id="anything-else" name="Anything else" rows="3"></textarea>
+					</div>
+				</fieldset>
+
+				<button type="submit" class="cta-button contact-form__submit">Send enquiry</button>
+			</form>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.contact {
+		width: 100%;
+	}
+
+	.contact__intro {
+		text-align: center;
+		max-width: 720px;
+		margin: 2rem auto 0;
+		padding: 0 1.5rem;
+	}
+
+	.contact__title {
+		margin-top: 0.5rem;
+	}
+
+	.contact__sub {
+		font-size: 1.15rem;
+		font-weight: var(--font-regular);
+		margin-top: 0.75rem;
+	}
+
+	.contact__form-section {
+		width: 90%;
+		max-width: 720px;
+		margin: 3rem auto 5rem;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	/* Honeypot — visually removed, still in the DOM for bots */
+	.contact-form__honey {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.contact-form__group {
+		border: none;
+		border-top: 1px solid var(--cream-rule);
+		padding: 2rem 0 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.75rem;
+	}
+
+	.contact-form__legend {
+		font-family: var(--other-font-family);
+		font-size: 0.62rem;
+		letter-spacing: 0.26em;
+		text-transform: uppercase;
+		font-weight: var(--font-medium);
+		color: var(--accent-color);
+		padding: 0;
+	}
+
+	.field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		text-align: left;
+	}
+
+	.field__label {
+		font-family: var(--other-font-family);
+		font-size: 0.95rem;
+		font-weight: var(--font-medium);
+		color: var(--secondary-colour);
+		line-height: 1.4;
+	}
+
+	.field__req {
+		color: var(--accent-color);
+	}
+
+	.field__input {
+		font-family: var(--other-font-family);
+		font-size: 1rem;
+		color: var(--text-colour);
+		background-color: var(--surface-colour);
+		border: 1px solid var(--cream-rule);
+		border-radius: 10px;
+		padding: 0.8rem 1rem;
+		width: 100%;
+		transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+	}
+
+	.field__input::placeholder {
+		color: var(--text-muted-colour);
+		opacity: 0.7;
+	}
+
+	.field__input:focus {
+		outline: none;
+		border-color: var(--accent-color);
+		box-shadow: 0 0 0 3px rgba(247, 142, 105, 0.25);
+	}
+
+	.field__textarea {
+		resize: vertical;
+		min-height: 6rem;
+		line-height: 1.6;
+	}
+
+	.field__options {
+		display: flex;
+		flex-direction: column;
+		gap: 0.65rem;
+	}
+
+	.field__options--grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.65rem 1.5rem;
+	}
+
+	.option {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.6rem;
+		font-family: var(--other-font-family);
+		font-size: 0.92rem;
+		color: var(--text-colour);
+		line-height: 1.4;
+		cursor: pointer;
+	}
+
+	.option input {
+		margin-top: 0.15rem;
+		accent-color: var(--accent-color);
+		width: 1rem;
+		height: 1rem;
+		flex: 0 0 auto;
+		cursor: pointer;
+	}
+
+	.contact-form__submit {
+		align-self: flex-start;
+		margin-top: 0.5rem;
+		font-size: 1.1rem;
+	}
+
+	@media (max-width: 560px) {
+		.field__options--grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
