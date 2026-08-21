@@ -68,7 +68,8 @@ import Layout from "../layouts/Layout.astro";
 							<label class="option"><input type="radio" name="Project type" value="Influencer + creator content collaboration" /> <span>Influencer + creator content collaboration</span></label>
 							<label class="option"><input type="radio" name="Project type" value="Brand experience content (events, editorial moments)" /> <span>Brand experience content (events, editorial moments)</span></label>
 							<label class="option"><input type="radio" name="Project type" value="Ongoing social content support" /> <span>Ongoing social content support</span></label>
-							<label class="option"><input type="radio" name="Project type" value="Other" /> <span>Other</span></label>
+							<label class="option"><input type="radio" name="Project type" value="Other" data-other="project-type-other" data-other-required /> <span>Other</span></label>
+							<input type="text" id="project-type-other" name="Project type (other)" class="field__input other-input" placeholder="Please specify" aria-label="Other project type" hidden />
 						</div>
 					</div>
 
@@ -88,7 +89,8 @@ import Layout from "../layouts/Layout.astro";
 							<label class="option"><input type="checkbox" name="Key goals[]" value="Build premium brand storytelling assets" /> <span>Build premium brand storytelling assets</span></label>
 							<label class="option"><input type="checkbox" name="Key goals[]" value="Create long-form campaign content" /> <span>Create long-form campaign content</span></label>
 							<label class="option"><input type="checkbox" name="Key goals[]" value="Attract new audiences or communities" /> <span>Attract new audiences or communities</span></label>
-							<label class="option"><input type="checkbox" name="Key goals[]" value="Other" /> <span>Other</span></label>
+							<label class="option"><input type="checkbox" name="Key goals[]" value="Other" data-other="key-goals-other" /> <span>Other</span></label>
+							<input type="text" id="key-goals-other" name="Key goals (other)" class="field__input other-input" placeholder="Please specify" aria-label="Other key goal" hidden />
 						</div>
 					</div>
 
@@ -119,7 +121,8 @@ import Layout from "../layouts/Layout.astro";
 							<label class="option"><input type="checkbox" name="Content types[]" value="Behind-the-scenes" /> <span>Behind-the-scenes</span></label>
 							<label class="option"><input type="checkbox" name="Content types[]" value="Event coverage" /> <span>Event coverage</span></label>
 							<label class="option"><input type="checkbox" name="Content types[]" value="Influencer / Creator content" /> <span>Influencer / Creator content</span></label>
-							<label class="option"><input type="checkbox" name="Content types[]" value="Other" /> <span>Other</span></label>
+							<label class="option"><input type="checkbox" name="Content types[]" value="Other" data-other="content-types-other" /> <span>Other</span></label>
+							<input type="text" id="content-types-other" name="Content types (other)" class="field__input other-input" placeholder="Please specify" aria-label="Other content type" hidden />
 						</div>
 					</div>
 
@@ -132,7 +135,8 @@ import Layout from "../layouts/Layout.astro";
 							<label class="option"><input type="checkbox" name="Content usage[]" value="Website / eCommerce" /> <span>Website / eCommerce</span></label>
 							<label class="option"><input type="checkbox" name="Content usage[]" value="Email marketing" /> <span>Email marketing</span></label>
 							<label class="option"><input type="checkbox" name="Content usage[]" value="Paid ads" /> <span>Paid ads</span></label>
-							<label class="option"><input type="checkbox" name="Content usage[]" value="Other" /> <span>Other</span></label>
+							<label class="option"><input type="checkbox" name="Content usage[]" value="Other" data-other="content-usage-other" /> <span>Other</span></label>
+							<input type="text" id="content-usage-other" name="Content usage (other)" class="field__input other-input" placeholder="Please specify" aria-label="Other content usage" hidden />
 						</div>
 					</div>
 
@@ -178,6 +182,27 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 	</main>
 </Layout>
+
+<script>
+	// Reveal the free-text "Please specify" box whenever an "Other" option
+	// is selected, and hide/clear it otherwise. For the required Project type
+	// radio, the box becomes required only while it is visible.
+	const form = document.querySelector<HTMLFormElement>(".contact-form");
+	if (form) {
+		const syncOthers = () => {
+			form.querySelectorAll<HTMLInputElement>("[data-other]").forEach((control) => {
+				const target = document.getElementById(control.dataset.other!) as HTMLInputElement | null;
+				if (!target) return;
+				const show = control.checked;
+				target.hidden = !show;
+				if (!show) target.value = "";
+				if (control.hasAttribute("data-other-required")) target.required = show;
+			});
+		};
+		form.addEventListener("change", syncOthers);
+		syncOthers();
+	}
+</script>
 
 <style>
 	.contact {
@@ -321,6 +346,19 @@ import Layout from "../layouts/Layout.astro";
 		height: 1rem;
 		flex: 0 0 auto;
 		cursor: pointer;
+	}
+
+	.other-input {
+		margin-top: 0.4rem;
+	}
+
+	.other-input[hidden] {
+		display: none;
+	}
+
+	/* Span the full row when it sits inside a two-column checkbox grid */
+	.field__options--grid .other-input {
+		grid-column: 1 / -1;
 	}
 
 	.contact-form__submit {
